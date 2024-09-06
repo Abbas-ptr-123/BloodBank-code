@@ -1,0 +1,264 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Pulse</title>
+    <link href="~/css/Index.css" rel="stylesheet" />
+
+    <link rel="icon" href='~/images/logo.png' type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body onload="slider()">
+    <header>
+        <div class="banner">
+            <div class="slider">
+                <img src="~/images/img.jpeg" id="slideimg">
+            </div>
+            <div class="overlay"></div>
+        </div>
+     
+       
+        <div class="text-box">
+            <h1>Start</h1>
+            <h1>Saving Lives</h1>
+            <p>Become a donor or request for blood and help save lives.</p>
+            <a href='@Url.Action("Register", "Home")' class="hero-btn">Register</a>
+        </div>
+    </header>
+
+  
+        <!------------------------------------ About Us Section -------------------------------->
+     
+
+        <main>
+            <section id="about-us">
+                <div class="about">
+                    <h1 class="heading">What is this all about ?</h1> <br>
+                    <p class="head-des" class="text">
+                        We solve the problem of blood emergencies by connecting <span class="one-line"><br></span> blood donors directly with people in blood need.
+                    </p>
+                    <div class="row">
+                        <div class="about-col">
+                            <div class="image">
+                                <img src="./Images/drop.png">
+                            </div>
+                            <h3>What we do ?</h3>
+                            <p>
+                                We connect blood donors with recipients, without any intermediary such as blood banks, for an
+                                efficient and seamless process.
+                            </p>
+                        </div>
+                        <div class="about-col">
+                            <div class="image">
+                                <img src="./Images/innovation.png">
+                            </div>
+                            <br>
+                            <h3>Innovative</h3>
+                            <p>
+                                Pulse is an innovative approach to address global health.We provide <span>
+                                    immediate
+                                    access
+                                </span> to blood donors.
+                            </p>
+                        </div>
+                        <div class="about-col">
+                            <div class="image">
+                                <img src="./Images/netwotk.png">
+                            </div>
+                            <h3>Network</h3>
+                            <p>
+                                Pulse is one of several community organizations working together as a network that
+                                responds to emergencies in an efficient manner.
+                            </p>
+                        </div>
+                        <div class="about-col">
+                            <div class="image">
+                                <img src="./Images/noti.png">
+                            </div>
+                            <h3>Get notified</h3>
+                            <p>
+                                Pulse Connect works with network partners to connect blood donors and recipients
+                                through an automated SMS service and a mobile app.
+                            </p>
+                        </div>
+                        <div class="about-col">
+                            <div class="image">
+                                <img src="./Images/cost.png">
+                            </div>
+                            <h3>Totally Free</h3>
+                            <p>
+                                Pulse ultimate goal is to provide an easy -to-use, easy-to-access, fast, efficient,
+                                and reliable way to get life-saving blood, totally <span>Free of cost.</span>
+                            </p>
+                        </div>
+                        <div class="about-col">
+                            <div class="image">
+                                <img src="./Images/save.png">
+                            </div>
+                            <h3>Save Life</h3>
+                            <p>
+                                We are a non profit foundation and our main objective is to make sure that everything is done
+                                to protect vulnerable persons.<span>
+                                    Help
+                                    us by making a gift!
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Volunteer Section -->
+        <div class="volunteer" section id="vol-sect">
+            <div class="title-head"><h1 class="title">Our Super Heroes</h1></div>
+            <p class="content">We depend on volunteers! Volunteers make up 96% of our total workforce and carry on our humanitarian work. Blood donation is healthy, our volunteers are available 24/7 to help and donate blood.</p>
+        </div>
+
+        <!-- ################# Gallery Start Here #######################--->
+
+        <div id="gallery" class="gallery container-fluid">
+            <div class="container">
+                <div class="row session-title">
+                    <h2>Checkout Our Gallery</h2>
+                </div>
+                <div class="gallery-row row">
+                    <div id="gg-screen"></div>
+                    <div class="gg-box">
+                        <div class="gg-element">
+                            <img src="~/images/g1.jpg">
+                        </div>
+                        <div class="gg-element">
+                            <img src="~/images/g2.jpg">
+                        </div>
+                        <div class="gg-element">
+                            <img src="~/images/g3.jpg">
+                        </div>
+                        <div class="gg-element">
+                            <img src="~/images/g4.jpg">
+                        </div>
+                        <div class="gg-element">
+                            <img src="~/images/g5.jpg">
+                        </div>
+                        <div class="gg-element">
+                            <img src="~/images/g6.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- ################# Donation Process Start Here #######################--->
+
+        <section id="process" class="donation-care">
+            <div class="container">
+                <div class="row session-title">
+                    <h2>Donation Process</h2>
+                    <p>The donation process from the time you arrive center until the time you leave</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 vd">
+                        <div class="bkjiu">
+                            <img src="~/images/g1.jpg" alt="">
+                            <h4><b>1 - </b>Registration</h4>
+                            <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                            <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 vd">
+                        <div class="bkjiu">
+                            <img src="~/images/g2.jpg" alt="">
+                            <h4><b>2 - </b>Seeing</h4>
+                            <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                            <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 vd">
+                        <div class="bkjiu">
+                            <img src="~/images/g3.jpg" alt="">
+                            <h4><b>3 - </b>Donation</h4>
+                            <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                            <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 vd">
+                        <div class="bkjiu">
+                            <img src="~/images/g4.jpg" alt="">
+                            <h4><b>4 - </b>Save Life</h4>
+                            <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                            <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+ 
+        <script src="~/js/Register.js"></script>
+ 
+        <script src="~/js/Scroll.js"></script>
+  
+        <script src="~/js/Up.js"></script>
+   
+    <script src="~/js/site.js"></script>
+    <script>
+        const preloader = document.querySelector('.preloader');
+        const fadeEffect = setInterval(() => {
+            if (!preloader.style.opacity) {
+                preloader.style.opacity = 1;
+            }
+            if (preloader.style.opacity > 0) {
+                preloader.style.opacity -= 1.5;
+            } else {
+                clearInterval(fadeEffect);
+            }
+        }, 1500);
+        window.addEventListener('load', fadeEffect);
+    </script>
+    <!--JAVASCRIPT FOR TOGGLE MENU -->
+    <script>
+        var headerl = document.getElementById("headerl");
+
+        function showMenu() {
+            headerl.style.right = "0";
+        }
+
+        function hideMenu() {
+            headerl.style.right = "-210px";
+        }
+    </script>
+    <script>
+        var slideimg = document.getElementById("slideimg");
+
+        var Images = new Array(
+            "/Images/bgimg1.jpg",
+            "/Images/bgimg2.jpg",
+            "/Images/bgimg5.jpeg",
+            "/Images/bgimg4.jpeg"
+        );
+
+        var len = Images.length;
+        var i = 0;
+
+        function slider() {
+            if (i > len - 1) {
+                i = 0;
+            }
+            slideimg.src = Images[i];
+            i++;
+            setTimeout('slider()', 3000);
+        }
+    </script>
+</body>
+</html>

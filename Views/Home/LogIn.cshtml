@@ -1,0 +1,67 @@
+﻿@model BloodBank.Models.LogIn
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]  Pulse</title>
+   @*  <link href="~/css/login.css" rel="stylesheet" /> *@
+    <link rel="icon" href='~/images/logo.png' type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+   
+    <!-- Combined login form starts here -->
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Welcome Back</h1>
+            <p>Please login to your account</p>
+        </div>
+
+        <form asp-action="LogIn" asp-controller="Account" method="post">
+            <div class="input-group">
+                <input asp-for="Username" placeholder="Username" autocomplete="username" required>
+                <i class="fas fa-user icon"></i>
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="input-group">
+                <input asp-for="Password" type="password" placeholder="Password" autocomplete="password" required>
+                <i class="fas fa-lock"></i>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <label><input type="checkbox" asp-for="RememberMe"> Remember Me</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+
+            <button type="submit" class="login-button">Login</button>
+        </form>
+
+        <div class="signup-link">
+            <p>Don't have an account? <a asp-action="Register" asp-controller="Home">Sign up</a></p>
+        </div>
+    </div>
+    <!-- Combined login form ends here -->
+
+    <script src="~/js/Register.js"></script>
+    @{
+        var successMessage = TempData["SuccessMessage"] as string;
+        var username = TempData["Username"] as string;
+        var password = TempData["Password"] as string;
+    }
+
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <script>
+            // Show a small alert or modal with the success message
+            alert("@successMessage \nUsername: @username \nPassword: @password");
+        </script>
+    }
+</body>
+</html>

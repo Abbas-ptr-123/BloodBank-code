@@ -1,0 +1,9 @@
+﻿<!-- VerifyCode.cshtml -->
+@model VerifyCodeViewModel
+
+<h2>Verify Code</h2>
+<form asp-action="VerifyCode" method="post">
+    <label for="code">Enter the verification code:</label>
+    <input type="text" id="code" name="Code" required />
+    <button type="submit">Verify</button>
+</form>

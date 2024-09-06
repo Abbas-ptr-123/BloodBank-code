@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>BloodBank</RootNamespace>
+    <UserSecretsId>2d534417-a8c7-4103-9e4e-17fedbc4928b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Profile\Profile.cshtml" />
+    <Content Remove="Views\Profile\VerifyCode.cshtml" />
+  </ItemGroup>
+
+
+	<ItemGroup>
+
+		<PackageReference Include="BCrypt.Net-Next.StrongName" Version="4.0.3" />
+
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
+
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.8" />
+
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.8" />
+		
+		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.8" />
+		
+		
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+		<PackageReference Include="System.Data.SQLite.EF6" Version="1.0.118" />
+		<PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.1" />
+		<PackageReference Include="System.Diagnostics.Tools" Version="4.3.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Views\Profile\Profile.cshtml" />
+		<None Include="Views\Profile\VerifyCode.cshtml" />
+		<None Include="wwwroot\images\backg.jpg" />
+		<None Include="wwwroot\images\bgimg %282%29.jpg" />
+		<None Include="wwwroot\images\bgimg1.jpg" />
+		<None Include="wwwroot\images\bgimg2.jpg" />
+		<None Include="wwwroot\images\bgimg3.jpg" />
+		<None Include="wwwroot\images\bgimg4.jpeg" />
+		<None Include="wwwroot\images\bgimg5.jpeg" />
+		<None Include="wwwroot\images\cost.png" />
+		<None Include="wwwroot\images\div.jpg" />
+		<None Include="wwwroot\images\drop.png" />
+		<None Include="wwwroot\images\favicon.png" />
+		<None Include="wwwroot\images\header.jpg" />
+		<None Include="wwwroot\images\help.jpg" />
+		<None Include="wwwroot\images\img %282%29.jpeg" />
+		<None Include="wwwroot\images\img %283%29.jpeg" />
+		<None Include="wwwroot\images\img %284%29.jpeg" />
+		<None Include="wwwroot\images\img.jpeg" />
+		<None Include="wwwroot\images\innovation.png" />
+		<None Include="wwwroot\images\logo.png" />
+		<None Include="wwwroot\images\netwotk.png" />
+		<None Include="wwwroot\images\noti.png" />
+		<None Include="wwwroot\images\OIP %281%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2810%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2811%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2812%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2813%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2814%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2821%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2823%29.jpeg" />
+		<None Include="wwwroot\images\OIP %2824%29.jpeg" />
+		<None Include="wwwroot\images\OIP %284%29.jpeg" />
+		<None Include="wwwroot\images\OIP %289%29.jpeg" />
+		<None Include="wwwroot\images\pre-loader.svg" />
+		<None Include="wwwroot\images\regphoto.png" />
+		<None Include="wwwroot\images\review-1.PNG" />
+		<None Include="wwwroot\images\review-2.PNG" />
+		<None Include="wwwroot\images\review-3.PNG" />
+		<None Include="wwwroot\images\review-background.jpg" />
+		<None Include="wwwroot\images\save.png" />
+		<None Include="wwwroot\images\ug.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Views\Profile\Profile.cshtml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Views\Profile\Profile.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Profile\VerifyCode.cshtml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Views\Profile\VerifyCode.cshtml" />
+	</ItemGroup>
+</Project>

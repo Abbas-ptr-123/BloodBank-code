@@ -1,0 +1,307 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif; /* Applied to the whole page for consistency */
+}
+
+body {
+    background-image: url('../images/ug.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+    color: #333; /* General text color */
+    line-height: 1.6;
+    margin-top: 100px; /* To accommodate the fixed header */
+}
+
+header {
+    background-color: #2E8B57; /* Darker shade of green for elegance */
+    color: #fff; /* White text for contrast */
+    height: 80px; /* Reduced height for a sleeker look */
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px; /* Increased padding for spacing */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+}
+
+.header-logo img {
+    width: 120px; /* Fixed width for logo */
+    height: auto;
+}
+
+.header-list ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-list li {
+    margin-left: 30px;
+    color: white; /* Updated to white */
+}
+
+.header-list a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white; /* White text for better contrast */
+    font-size: 18px; /* Slightly smaller font size */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .header-list a:hover {
+        background-color: rgba(220, 20, 60, 0.8); /* Refined hover effect */
+        color: white;
+    }
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px; /* Reduced width for a more compact design */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for focus */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+h1 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: 30px 0;
+    color: #333; /* Dark text color for contrast */
+    font-size: 32px; /* Larger font size */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff; /* White background for better contrast */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #2E8B57; /* Consistent with theme */
+    font-size: 16px; /* Slightly larger for readability */
+}
+
+input, textarea, select {
+    width: 100%;
+    height: 45px; /* Increased height for larger input fields */
+    border: 1px solid #ddd; /* Softer border color */
+    border-radius: 8px; /* More rounded input fields */
+    font-size: 16px; /* Larger font size for readability */
+    margin: 10px 0;
+    padding: 10px 15px; /* Increased padding for input comfort */
+    transition: border-color 0.3s ease;
+}
+
+    input:focus, textarea:focus, select:focus {
+        border-color: #2E8B57; /* Green border on focus for consistency */
+        outline: none; /* Removed outline for a cleaner look */
+    }
+
+textarea {
+    height: 100px; /* Fixed height */
+    padding: 15px; /* More padding for comfort */
+    resize: vertical; /* Allow resizing */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px; /* Larger font size */
+    font-weight: 700;
+    background: linear-gradient(45deg, #FFD700 24%, #FF8C00 100%); /* Gold to Dark Orange */
+    color: black; /* Dark text for contrast */
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+    button:hover {
+        background: linear-gradient(45deg, #FF8C00 24%, #FFD700 100%); /* Reverse gradient on hover */
+        color: white; /* White text on hover */
+    }
+
+.donor-form, .receiver-form {
+    display: none;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+@media (max-width: 700px) {
+    .header-logo img {
+        width: 100px; /* Smaller logo for smaller screens */
+    }
+
+    .header-list {
+        flex-direction: column;
+        padding: 10px 0; /* Adjusted padding for spacing */
+    }
+
+        .header-list li {
+            margin: 10px 0; /* Adjusted margin */
+        }
+
+        .header-list a {
+            padding: 15px 20px; /* Adjusted padding */
+            font-size: 16px; /* Adjusted font size */
+        }
+
+    button {
+        font-size: 16px; /* Adjusted font size */
+    }
+}
+
+@media screen and (max-width: 990px) and (min-width: 665px) {
+    .header-list {
+        flex-direction: column; /* Adjusted direction */
+    }
+
+        .header-list li {
+            margin: 10px 0; /* Adjusted margin */
+        }
+}
+/* ===================================== Donation Process CSS ================================== */
+.donation-care {
+    padding: 50px;
+    background-color: #FFF;
+}
+
+@media screen and (max-width: 940px) {
+    .donation-care {
+        padding: 30px 10px;
+    }
+}
+
+.donation-care h4 {
+    padding: 10px;
+    margin-bottom: 0px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.donation-care p {
+    padding: 10px;
+    padding-top: 0px;
+    text-align: justify;
+    font-size: .85rem;
+}
+
+.donation-care i {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.donation-care .vd {
+    margin-bottom: 20px;
+}
+
+.donation-care .bkjiu {
+    background-color: #F8F9FA;
+    padding: 5px;
+}
+
+    .donation-care .bkjiu .btn {
+        margin-bottom: 6px;
+        margin-left: 6px;
+    }
+
+@media screen and (max-width: 940px) {
+    .health-care {
+        padding: 50px 10px;
+    }
+}
+/* ===================================== Gallery  CSS ================================== */
+.gallery {
+    padding: 50px;
+    background-color: #f1f1f152;
+}
+
+@media screen and (max-width: 940px) {
+    .gallery {
+        padding: 30px 10px;
+    }
+}
+
+@media (min-width: 478px) {
+    .gallery .gg-element:nth-child(3n+0) {
+        grid-row-end: span 1;
+    }
+}
+/* ===================================== Our Blog  CSS ================================== */
+.blog-container {
+    background-color: #cccccc2e;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 940px) {
+    .blog-container {
+        padding: 30px 10px;
+    }
+}
+
+.blog-container .news-row {
+    margin-top: 20px;
+}
+
+    .blog-container .news-row .news-card {
+        display: flex;
+        background-color: #FFF;
+        box-shadow: 0 2px 3px 0 rgba(218, 218, 253, 0.35), 0 0px 3px 0 rgba(206, 206, 238, 0.35);
+        margin-bottom: 20px;
+    }
+
+        .blog-container .news-row .news-card .detail {
+            padding: 10px;
+            margin: auto;
+        }
+
+            .blog-container .news-row .news-card .detail h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0px;
+            }
+
+            .blog-container .news-row .news-card .detail p {
+                font-size: .85rem;
+                text-indent: 20px;
+                text-align: justify;
+            }
+
+           /* .blog-container .news-row .news-card .detail .footp {
+                text-indent: 0px;
+                background-color: #8ad1e2a1;
+                margin-top: 5px;
+                font-size: .8rem;
+            }
+
+                .blog-container .news-row .news-card .detail .footp span {
+                    padding: 0px 5px;
+                }*/
+
+        .blog-container .news-row .news-card:hover {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+
+/*# sourceMappingURL=style.css.map */

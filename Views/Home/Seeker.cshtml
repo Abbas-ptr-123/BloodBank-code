@@ -1,0 +1,307 @@
+﻿@model BloodBank.Models.Seeker
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/seeker.css" rel="stylesheet" />
+    <link rel="icon" href='~/images/logo.png' type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- ################# Preloader #######################--->
+    <div class="preloader">
+        <img src="~/images/pre-loader.svg" />
+    </div>
+
+
+    <!-- ################# Home page #######################--->
+    <header>
+        <div class="banner">
+            <div class="slider">
+                <img src="~/images/img.jpeg" id="slideimg">
+            </div>
+            <div class="overlay">
+            </div>
+        </div>
+        <div id="logo">
+            <a href="index.cshtml"><img src="/images/logo.png" /></a>
+        </div>
+    
+   @* 
+        <div class="header-list">
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("GetHelp", "Home")">Get Help</a></li>
+                <li><a href="#Donor-list">Donor List</a></li>
+                <li><a href="#about-us">About Us</a></li>
+               <div class="profile-sticker">
+                 <img src="~/images/profile.png" alt="Profile Picture" class="profile-pic">
+                    <div class="dropdown">
+                        <img src="/path/to/profile-logo.png" alt="Profile" class="profile-logo" onclick="toggleDropdown()">
+                        <div id="profileDropdown" class="dropdown-content">
+                            <a href="@Url.Action("ProfilePicture", "Profile")">Profile Picture</a>
+                            <a href="@Url.Action("Update", "Profile")">Update Profile</a>
+                            <a href="@Url.Action("Logout", "Account")">Logout</a>
+                        </div>
+                    </div>
+                </div>
+
+            </ul>
+        </div> *@
+    </header>
+
+
+
+    <!-- ################# Volunteer Section #######################--->
+
+
+    <div class="volunteer" section id="vol-sect">
+        <div class="title-head">
+            <h1 class="title">Our super heroes </h1>
+        </div>
+        <p class="content">
+            We depend on volunteers! Volunteers make up 96% of our total<span class="line"><br></span>
+            workforce and carry on our humanitarian work. Blood donation is healthy,<span class="line"><br></span> our
+            volunteers are available 24/7 to help and donate
+            blood. Blood banks store blood<span class="line"><br></span> bags but our volunteers are there with you in
+            an emergency for a blood transfusion real time.
+        </p>
+    </div>
+
+   
+
+    <!-- ################# Gallery Start Here #######################--->
+
+    <div id="gallery" class="gallery container-fluid">
+        <div class="container">
+            <div class="row session-title">
+                <h2>Checkout Our Gallery</h2>
+            </div>
+            <div class="gallery-row row">
+                <div id="gg-screen"></div>
+                <div class="gg-box">
+                    <div class="gg-element">
+                        <img src="~/images/g1.jpg">
+                    </div>
+                    <div class="gg-element">
+                        <img src="~/images/g2.jpg">
+                    </div>
+                    <div class="gg-element">
+                        <img src="~/images/g3.jpg">
+                    </div>
+                    <div class="gg-element">
+                        <img src="~/images/g4.jpg">
+                    </div>
+                    <div class="gg-element">
+                        <img src="~/images/g5.jpg">
+                    </div>
+                    <div class="gg-element">
+                        <img src="~/images/g6.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ################# Donation Process Start Here #######################--->
+
+    <section id="process" class="donation-care">
+        <div class="container">
+            <div class="row session-title">
+                <h2>Donation Process</h2>
+                <p>The donation process from the time you arrive center until the time you leave</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 vd">
+                    <div class="bkjiu">
+                        <img src="~/images/g1.jpg" alt="">
+                        <h4><b>1 - </b>Registration</h4>
+                        <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                        <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 vd">
+                    <div class="bkjiu">
+                        <img src="~/images/g2.jpg" alt="">
+                        <h4><b>2 - </b>Seeing</h4>
+                        <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                        <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 vd">
+                    <div class="bkjiu">
+                        <img src="~/images/g3.jpg" alt="">
+                        <h4><b>3 - </b>Donation</h4>
+                        <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                        <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 vd">
+                    <div class="bkjiu">
+                        <img src="~/images/g4.jpg" alt="">
+                        <h4><b>4 - </b>Save Life</h4>
+                        <p>Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet suscipit lobortis</p>
+                        <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- ################# Footer Section #######################--->
+
+    <footer>
+        <div class="siteFooterBar">
+            <div class="content1">
+                <div class="foot">2024 © All rights reserved.</div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <h3>JOIN OUR CAUSE</h3>
+            <p>
+                Donating blood or platelets can be intimidating and even scary. Time to put those hesitations
+                and
+                fears
+                aside. Learn from Pulse and platelet donors how simple and easy it is to roll up a
+                sleeve
+                and help
+                save lives.
+            </p>
+            <div class="socials">
+                <ul class="sci">
+                    <li>
+                        <a href="https://www.facebook.com/givebloodnhs/" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/indiablooddonation/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://nbtc.naco.gov.in/" target="_blank"><i class="fas fa-globe"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ################# Javascript For the interactivity #######################--->
+
+    <!--Javascript for pre-loader-->
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.preloader');
+            let opacity = 1;
+            const fadeEffect = setInterval(() => {
+                if (opacity > 0) {
+                    opacity -= 0.1;
+                    preloader.style.opacity = opacity;
+                } else {
+                    clearInterval(fadeEffect);
+                    preloader.style.display = 'none';
+                }
+            }, 1000); // Adjust the interval duration as needed
+        });
+    </script>
+
+    <!--js for scroll to top-->
+    <script src="~/js/Up.js"></script>
+
+    <!--JAVASCRIPT FOR TOGGLE MENU -->
+    <script>
+        var headerl = document.getElementById("headerl");
+
+        function showMenu() {
+            headerl.style.right = "0";
+        }
+
+        function hideMenu() {
+            headerl.style.right = "-210px";
+        }
+    </script>
+
+
+    <!--js for scroll effects-->
+    <script>
+        var slideimg = document.getElementById("slideimg");
+
+        var Images = new Array(
+            "~/images/bgimg1.jpg",
+            "~/images/bgimg2.jpg",
+            "~/images/bgimg5.jpeg",
+            "~/images/bgimg4.jpeg"
+        );
+
+
+        var len = Images.length;
+        var i = 0;
+
+        function slider() {
+            if (i > len - 1) {
+                i = 0;
+            }
+            slideimg.src = Images[i];
+            i++;
+            setTimeout('slider()', 3000);
+        }
+    </script>
+    <script src="~/js/Scroll.js"></script>
+
+    @* for header *@
+    <script>
+        var headerl = document.getElementById("headerl");
+
+        function showMenu() {
+            headerl.style.right = "0";
+        }
+
+        function hideMenu() {
+            headerl.style.right = "-210px";
+        }
+    </script>
+
+
+    @*  For Smoth Scrooling *@
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        function toggleDropdown() {
+            document.getElementById("profileDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.profile-logo')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+    </html>

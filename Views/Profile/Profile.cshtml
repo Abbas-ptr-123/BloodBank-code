@@ -1,0 +1,52 @@
+﻿ @model BloodBank.Models.Profile
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <h1>Update Profile</h1>
+    <form asp-action="Update" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="FullName" value="@Model.FullName" required />
+        </div>
+        <div>
+            <label for="father-name">Father's Name:</label>
+            <input type="text" id="father-name" name="FatherName" value="@Model.FatherName" required />
+        </div>
+        <div>
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="ContactNumber" value="@Model.ContactNumber" required />
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <textarea id="address" name="Address" required>@Model.Address</textarea>
+        </div>
+     <div>
+            <label for="blood-group">Blood Group:</label>
+            <select id="blood-group" name="BloodGroup" required>
+                @foreach (var bloodGroup in new[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" })
+                {
+                    <option value="@bloodGroup" selected="@(Model.BloodGroup == bloodGroup)">
+                        @bloodGroup
+                    </option>
+                }
+            </select>
+   </div>
+
+            <button type="submit">Save</button>
+        </div>
+    </form>
+    @if (TempData["UpdateSuccess"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["UpdateSuccess"]
+        </div>
+    }
+</body>
+</html>

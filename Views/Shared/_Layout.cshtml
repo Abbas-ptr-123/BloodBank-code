@@ -1,0 +1,211 @@
+﻿@{
+    bool isAuthenticated = User.Identity.IsAuthenticated;
+    bool isDonor = User.IsInRole("Donor"); // Check if the user is in the Donor role
+    bool isSeeker = User.IsInRole("Seeker"); // Check if the user is in the Seeker role
+}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]  Pulse</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body >
+    <div class="preloader">
+        <img src="pre-loader.svg" alt="spinner">
+    </div>
+    
+    @if (!isAuthenticated)
+    {
+        <!-- Header for non-authenticated users -->
+        <header>
+            <div class="header-logo">
+                <img src="~/images/logo.png" alt="Logo">
+            </div>
+    <div class="header-list">   
+        <ul>
+            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="@Url.Action("GetHelp", "Home")">Get Help</a></li>
+            <li><a href="@Url.Action("Index", "Home")#Gallery" id="Gallery-link">Gallery</a></li>
+            <li><a href="@Url.Action("Index", "Home")#about-us" id="about-us-link">About Us</a></li>
+                    <li><a href="@Url.Action("Register", "Account")">Register</a></li>
+        </ul>
+    </div>
+    </header>
+    }
+    else
+    {
+    <!-- Header for authenticated users -->
+    @if (isDonor)
+    {
+        <!-- Header for Donor -->
+        <header>
+            <div class="header-logo">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="header-list">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Blogs", "Home")">Blogs</a></li>
+                    <li><a href="@Url.Action("SeekerList", "Donor")">Seeker List</a></li>
+                    <li>
+                        <!-- Profile Dropdown Menu -->
+                        <div class="profile-dropdown">
+                            <img src="~/images/profile-logo.png" alt="Profile" class="profile-logo">
+                            <div class="dropdown-content">
+                                <a href="@Url.Action("Profile", "Account")">Profile</a>
+                                <a href="@Url.Action("UpdateProfile", "Account")">Update Profile</a>
+                                <a href="@Url.Action("Logout", "Account")">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    }
+    else if (isSeeker)
+    {
+        <!-- Header for Seeker -->
+        <header>
+            <div class="header-logo">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="header-list">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Blogs", "Home")">Blogs</a></li>
+                    <li><a href="@Url.Action("DonorList", "Seeker")">Donor List</a></li>
+                    <li>
+                        <!-- Profile Dropdown Menu -->
+                        <div class="profile-dropdown">
+                            <img src="~/images/profile-logo.png" alt="Profile" class="profile-logo">
+                            <div class="dropdown-content">
+                                <a href="@Url.Action("Profile", "Account")">Profile</a>
+                                <a href="@Url.Action("UpdateProfile", "Account")">Update Profile</a>
+                                <a href="@Url.Action("Logout", "Account")">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    
+    }
+    }
+
+    
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <!--FOOTER-->
+    <!--*************** Footer  Starts Here *************** -->
+    <footer id="contact" class="container-fluid">
+        <div class="container">
+
+            <div class="row content-ro">
+                <div class="col-lg-4 col-md-12 footer-contact">
+                    <h2>Contact Informatins</h2>
+                    <div class="address-row">
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail">
+                            <p>Government Degree College Takht Bhai</p>
+                        </div>
+                    </div>
+                    <div class="address-row">
+                        <div class="icon">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="detail">
+                            <p>sales@Pulse.com <br> support@Pulse.com</p>
+                        </div>
+                    </div>
+                    <div class="address-row">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="detail">
+                            <p>+92 3239127962 <br> +92 3239127962</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 footer-links">
+                    <div class="row no-margin mt-2">
+                        <h2>Quick Links</h2>
+                        <ul>
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Contacts</li>
+                            <li>Gallery</li>
+                            
+
+                        </ul>
+                    </div>
+                    <div class="row no-margin mt-1">
+                        <h2 class="m-t-2">More Products</h2>
+                        <ul>
+                            <li>Forum PHP Script</li>
+                            <li>Edu Smart</li>
+                            <li>Smart Event</li>
+                            <li>Smart School</li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-12 footer-form">
+                    <div class="form-card">
+                        <div class="form-title">
+                            <h4>Quick Message</h4>
+                        </div>
+                        <div class="form-body">
+                            <input type="text" placeholder="Enter Name" class="form-control">
+                            <input type="text" placeholder="Enter MobileNo" class="form-control">
+                            <input type="text" placeholder="Enter Email Address" class="form-control">
+                            <input type="text" placeholder="Your Message" class="form-control">
+                            <button class="btn btn-sm btn-primary w-100">Send Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <p>Copyright © <a href="https://www.smarteyeapps.com">Pulse.com</a> | All right reserved.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 socila-link">
+                        <ul>
+                            <li><a><i class="fab fa-github"></i></a></li>
+                            <li><a><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a><i class="fab fa-twitter"></i></a></li>
+                            <li><a><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js"></script>
+
+    @RenderSection("Scripts", required: false)
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
